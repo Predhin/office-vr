@@ -1,0 +1,22 @@
+<html>
+
+<head>
+    <script src="vendor.js"></script>
+    <script src="preapp.js"></script>
+</head>
+
+<body>
+  <a-scene log="Hello, Scene!">
+    <a-assets>
+      <a-asset-item id="office-obj" src="assets/office.obj"></a-asset-item>
+      <a-asset-item id="office-mtl" src="assets/office.mtl"></a-asset-item>
+    </a-assets>
+    <a-obj-model src="#office-obj" mtl="#office-mtl"></a-obj-model>
+    <a-entity position="-1 2 4.5">
+      <a-camera></a-camera>
+    </a-entity>
+  </a-scene>
+  <div foo></div>
+</body>
+
+</html>
