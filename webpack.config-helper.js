@@ -53,7 +53,9 @@ module.exports = (options) => {
 
     webpackConfig.plugins.push(
       new CopyWebpackPlugin([
-        { from: './src/assets/**/*', to: 'assets', flatten: true }
+        { from: './src/assets/**/*', to: 'assets', flatten: true },
+        { from: 'src/favicon.ico' },
+        { from: 'src/favicon.png' }
       ]),
       new Webpack.optimize.UglifyJsPlugin({
         compressor: {
@@ -71,7 +73,9 @@ module.exports = (options) => {
   } else {
     webpackConfig.plugins.push(
       new CopyWebpackPlugin([
-        { from: './src/assets/**/*', to: 'assets', flatten: true }
+        { from: './src/assets/**/*', to: 'assets', flatten: true },
+        { from: 'src/favicon.ico' },
+        { from: 'src/favicon.png' }
       ]),
       new Webpack.HotModuleReplacementPlugin()
     );
