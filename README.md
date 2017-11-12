@@ -12,6 +12,7 @@ _Office Desk Simulation application(webapp) is a VR application built using A-FR
 
 ```sh
 npm i webpack -g
+npm i webpack-dev-server -g
 git clone git@github.com:Predhin/office-vr.git
 cd office-vr
 npm install
