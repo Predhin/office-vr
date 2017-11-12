@@ -25,9 +25,21 @@
       <a-asset-item id="office-mtl" src="assets/office.mtl"></a-asset-item>
     </a-assets>
     <a-obj-model src="#office-obj" mtl="#office-mtl"></a-obj-model>
-    <a-image src="assets/my-image.png" width="10" height="10" position="-5 1 -7" rotation="0 10 0"></a-image>
-    <a-entity position="-1 2 4.5">
-      <a-camera></a-camera>
+    <!--<a-entity>
+        <a-image src="assets/my-image.png" width="5" height="5" position="-5 5 -7" rotation="0 10 0"></a-image>
+    </a-entity>-->
+    <a-entity get-notice1-mosein
+              geometry="primitive: plane; width:0.5; height: 0.7" material="opacity:0.0; transparent: true" position="6.8 3.28 -7.9" rotation="0 -90 0"></a-entity>  
+    <a-entity get-notice2-mosein
+              geometry="primitive: plane; width:0.8; height: 0.75" material="opacity:0.0; transparent: true" position="6.8 3.2 -6.2" rotation="0 -90 0"></a-entity>  
+    <a-entity get-notice3-mosein
+              geometry="primitive: plane; width:0.4; height: 0.65" material="opacity:0.0; transparent: true" position="6.8 1.83 -6.26" rotation="0 -90 8"></a-entity>
+    <a-entity get-clock1-mosein
+              geometry="primitive: plane; width:.65; height: .65" material="opacity: 0.0; transparent: true" position="-7.85 3.24 -6.05" rotation="0 90 0"></a-entity>  
+    <a-entity position="-1 2 4.5">    
+      <a-camera id="sceneCamera">
+          <a-cursor></a-cursor>
+      </a-camera>
     </a-entity>
   </a-scene>
   <div foo></div>
