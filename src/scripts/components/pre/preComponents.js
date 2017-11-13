@@ -5,8 +5,10 @@ export default class PreComponents {
   constructor() {
     // initialize pre-components from here initialised on head tag
     new LogComponent();
-    new NoticeBoardComponent();
-    new ClockComponent();
+    window.onload = function (){
+      new NoticeBoardComponent();
+      new ClockComponent();
+    };    
   }
 }
 new PreComponents();
