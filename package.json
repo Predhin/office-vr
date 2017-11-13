@@ -19,7 +19,7 @@
     "type": "git",
     "url": "git+https://github.com/predhin/VR_CaseStudy.git"
   },
-  "author": "team tr cts kochi<teamtrctskochigmail.com@>",
+  "author": "team tr cts kochi<teamtrctskochi@gmail.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/predhin/VR_CaseStudy/issues"
@@ -58,6 +58,7 @@
   },
   "dependencies": {
     "aframe": "^0.7.1",
+    "aframe-extras": "^3.12.4",
     "babel-polyfill": "^6.9.0"
   }
 }
