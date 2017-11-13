@@ -31,6 +31,19 @@ module.exports = (options) => {
       }),
       new HtmlWebpackPlugin({
         template: './src/index.html',
+        filename: 'index.html',
+        inject: 'body',
+        excludeChunks: ['vendor', 'preapp']
+      }),
+      new HtmlWebpackPlugin({
+        template: './src/outside.html',
+        filename: 'outside.html',
+        inject: 'body',
+        excludeChunks: ['vendor', 'preapp']
+      }),
+      new HtmlWebpackPlugin({
+        template: './src/index.html',
+        filename: 'office.html',
         inject: 'body',
         excludeChunks: ['vendor', 'preapp']
       })
