@@ -36,7 +36,7 @@
     <a-obj-model src="#officeObj" mtl="#officeMtl"></a-obj-model>
 
     <!-- Checkpoint container -->
-    <a-entity wasd-controls camera="userHeight: 1.6" universal-controls="movementControls: checkpoint" checkpoint-controls="mode: animate">
+    <a-entity wasd-controls id="sceneCamera" camera="userHeight: 1.6" universal-controls="movementControls: checkpoint" checkpoint-controls="mode: animate">
       <a-entity cursor position="0 0 -1" geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03;" material="color: #CCC; shader: flat;">
       </a-entity>
     </a-entity>
@@ -44,7 +44,7 @@
     <!-- Checkpoints -->
     <a-entity position="1 0 1">
       <!-- Notice Board -->
-      <a-cylinder checkpoint="offset: 0 1.6 0" radius="1" height="0.1" position="4.995 0 -8.119" color="#39BB82"></a-cylinder>
+      <a-cylinder checkpoint="offset: 0 1.6 0" radius="1" height="0.1" position="3.368 0.852 -8.119" color="#39BB82"></a-cylinder>
       <!-- Lobby -->
       <a-cylinder checkpoint="offset: 0 1.6 0" radius="1" height="0.1" position="12.084 0 0.346" color="#39BB82"></a-cylinder>
       <!-- Home -->
