@@ -7,6 +7,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const ExtractSASS = new ExtractTextPlugin('styles/bundle.css');
 const webpack = require('webpack');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const UglifyJSPlugin = require('uglifyjs-webpack-plugin')
 
 module.exports = (options) => {
   const dest = Path.join(__dirname, 'dist');
@@ -57,11 +58,7 @@ module.exports = (options) => {
         { from: 'src/favicon.ico' },
         { from: 'src/favicon.png' }
       ]),
-      new Webpack.optimize.UglifyJsPlugin({
-        compressor: {
-          warnings: false
-        }
-      }),
+      new UglifyJSPlugin(),
       ExtractSASS
     );
 

@@ -1,48 +1,83 @@
 <html>
 
 <head>
-    <script src="vendor.js"></script>
-    <script src="preapp.js"></script>
-    <title>office-vr</title>
-    <meta charset="utf-8" />
-    <link rel="apple-touch-icon" href="favicon.png">
-    <link rel="apple-touch-startup-image" href="favicon.png">
-    <meta name="apple-mobile-web-app-title" content="Office VR">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="mobile-web-app-capable" content="yes">
-    <link rel="icon" type="image/png" href="favicon.png">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="description" content="Office Desk Simulation application(webapp) is a VR application built using A-FRAME. It basically provided a Office Desk virtual reality experience to the user.">
-    <meta name="keywords" content="office,vr">
-    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport'>
-    <meta name="viewport" content="width=device-width">
+  <title>office-vr</title>
+  <meta charset="utf-8" />
+  <link rel="apple-touch-icon" href="favicon.png">
+  <link rel="apple-touch-startup-image" href="favicon.png">
+  <meta name="apple-mobile-web-app-title" content="Office VR">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="mobile-web-app-capable" content="yes">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="description" content="Office Desk Simulation application(webapp) is a VR application built using A-FRAME. It basically provided a Office Desk virtual reality experience to the user.">
+  <meta name="keywords" content="office,vr">
+  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport'>
+  <meta name="viewport" content="width=device-width">
+  <script src="vendor.js"></script>
+  <script src="preapp.js"></script>
 </head>
+
 <body>
   <a-scene log="Hello, Scene!">
+    <!-- Assets -->
     <a-assets>
-      <a-asset-item id="office-obj" src="assets/office.obj"></a-asset-item>
-      <a-asset-item id="office-mtl" src="assets/office.mtl"></a-asset-item>
+      <a-asset-item id="officeObj" src="assets/office.obj"></a-asset-item>
+      <a-asset-item id="officeMtl" src="assets/office.mtl"></a-asset-item>
+      <a-mixin id="checkpoint"></a-mixin>
+      <a-mixin id="checkpoint-hovered" color="#6CEEB5"></a-mixin>
+      <a-mixin id="noticeBoardInfo" text="align: center; width: 6;
+           value: See Notice Board"></a-mixin>
     </a-assets>
-    <a-obj-model src="#office-obj" mtl="#office-mtl"></a-obj-model>
-    <!--<a-entity>
-        <a-image src="assets/my-image.png" width="5" height="5" position="-5 5 -7" rotation="0 10 0"></a-image>
-    </a-entity>-->
-    <!--<a-entity get-notice1-mosein
-              geometry="primitive: plane; width:0.5; height: 0.7" material="opacity:0.0; transparent: true" position="6.8 3.28 -7.9" rotation="0 -90 0"></a-entity>  
-    <a-entity get-notice2-mosein
-              geometry="primitive: plane; width:0.8; height: 0.75" material="opacity:0.0; transparent: true" position="6.8 3.2 -6.2" rotation="0 -90 0"></a-entity>  
-    <a-entity get-notice3-mosein
-              geometry="primitive: plane; width:0.4; height: 0.65" material="opacity:0.0; transparent: true" position="6.8 1.83 -6.26" rotation="0 -90 8"></a-entity>
-    <a-entity get-clock1-mosein
-              geometry="primitive: plane; width:.65; height: .65" material="opacity: 0.0; transparent: true" position="-7.85 3.24 -6.05" rotation="0 90 0"></a-entity> 
-    -->           
-    <a-entity position="-1 2 4.5">    
-      <a-camera id="sceneCamera">
-          <a-cursor></a-cursor>
-      </a-camera>
+
+
+    <!-- Object model of Office -->
+    <a-obj-model src="#officeObj" mtl="#officeMtl"></a-obj-model>
+
+    <!-- Checkpoint container -->
+    <a-entity wasd-controls camera="userHeight: 1.6" universal-controls="movementControls: checkpoint" checkpoint-controls="mode: animate">
+      <a-entity cursor position="0 0 -1" geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03;" material="color: #CCC; shader: flat;">
+      </a-entity>
     </a-entity>
+
+    <!-- Checkpoints -->
+    <a-entity position="1 0 1">
+      <!-- Notice Board -->
+      <a-cylinder checkpoint="offset: 0 1.6 0" radius="1" height="0.1" position="4.995 0 -8.119" color="#39BB82"></a-cylinder>
+      <!-- Lobby -->
+      <a-cylinder checkpoint="offset: 0 1.6 0" radius="1" height="0.1" position="12.084 0 0.346" color="#39BB82"></a-cylinder>
+      <!-- Home -->
+      <a-cylinder checkpoint="offset: 0 1.6 0" radius="1" height="0.1" position="-3 0 0" color="#39BB82"></a-cylinder>
+      <!-- Toilet(outside) -->
+      <a-cylinder checkpoint="offset: 0 1.6 0" radius="1" height="0.1" position="-8.0 0 1.546" color="#39BB82"></a-cylinder>
+      <!-- Toilet(inside) -->
+      <a-cylinder checkpoint="offset: 0 1.6 0" radius="1" height="0.1" position="-11.661 0 -0.624" color="#39BB82"></a-cylinder>
+      <!-- Meeting Room(inside) -->
+      <a-cylinder checkpoint="offset: 0 1.6 0" radius="1" height="0.1" position="-6.001 0 4.425" color="#39BB82"></a-cylinder>
+      <!-- Meeting Room(outside) -->
+      <a-cylinder checkpoint="offset: 0 1.6 0" radius="1" height="0.1" position="-8.168 0 3.878" color="#39BB82"></a-cylinder>
+      <!-- Meeting Room Seat -->
+      <a-cylinder checkpoint="offset: 0 1.6 0" radius="1" height="0.1" position="-12.880 1.154 8.692" color="#39BB82"></a-cylinder>
+      <!-- Manager Room(inside) -->
+      <a-cylinder checkpoint="offset: 0 1.6 0" radius="1" height="0.1" position="2.965 0 4.425" color="#39BB82"></a-cylinder>
+      <!-- Manager Room(outside) -->
+      <a-cylinder checkpoint="offset: 0 1.6 0" radius="1" height="0.1" position="4.993 0 3.878" color="#39BB82"></a-cylinder>
+      <!-- Manager Visitor Desk -->
+      <a-cylinder checkpoint="offset: 0 1.6 0" radius="1" height="0.1" position="5.924 0.849 8.718" color="#39BB82"></a-cylinder>
+      <!-- Exit office -->
+      <a-cylinder checkpoint="offset: 0 1.6 0" radius="1" height="0.1" position="20.075 0 -2.811" color="#39BB82"></a-cylinder>
+    </a-entity>
+
+    <!-- Info texts -->
+    <a-text position="5.677 0.402 -6.523" color="red" mixin="noticeBoardInfo" font="kelsonsans"></a-text>
+
+    <!-- Lighting -->
+    <a-light type="ambient" color="#fff"></a-light>
+
+    <!-- Sky -->
+    <a-sky color="#6EBAA7"></a-sky>
   </a-scene>
-  <div foo></div>
 </body>
+
 </html>
