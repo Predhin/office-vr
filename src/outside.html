@@ -20,7 +20,7 @@
 </head>
 
 <body>
-  <a-scene log="Hello, Scene!">
+  <a-scene building-main-gate log="Hello, Scene!">
     <!-- Assets -->
     <a-assets>
       <a-asset-item id="buildingObj" src="assets/office-building.obj"></a-asset-item>
@@ -34,14 +34,35 @@
     <!-- Object model of Office -->
     <a-obj-model src="#buildingObj" mtl="#buildingMtl"></a-obj-model>
 
-    <a-entity position="-1.000 -1.501 4.5">    
-      <a-camera id="sceneCamera">
-          <a-cursor></a-cursor>
+    <a-entity>    
+      <a-camera id="sceneCamera" position="0 -1 4" wasd-controls universal-controls="movementControls: checkpoint" checkpoint-controls="mode: animate">
+          <a-cursor position="0 0 -1"></a-cursor>
       </a-camera>
+    </a-entity> 
+
+    <!-- Checkpoint container 
+    <a-entity position="0 0 3.6"> 
+    <a-entity wasd-controls camera  universal-controls="movementControls: checkpoint" checkpoint-controls="mode: animate">
+      <a-entity cursor position="0 0 -0.5" geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03;" material="color: #CCC; shader: flat;">
+      </a-entity>
+      
+    </a-entity>
+  </a-entity>-->
+
+    <!-- Checkpoints -->
+    <a-entity>
+      <!-- Main Gate -->
+      <a-box checkpoint="offset: 0 1.5 0" id="main-gate-entry" main-gate-entry="" depth="0" width="0.280" height="0.450" position="0 0 0.600" color="#6F7073" material="opacity: 0; transparent: true"></a-box>
     </a-entity>
 
+
+    <a-entity id="outdoor" material="opacity: 0; transparent: true" geometry="primitive: plane"
+    position="0 0 4" sound="src: url(assets/building-outdoor.mp3); autoplay: true; loop: true"></a-entity>
+    
     <!-- Sky -->
     <a-sky color="#456288"></a-sky>
+
+    
 
   </a-scene>
 </body>
