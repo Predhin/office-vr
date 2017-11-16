@@ -25,6 +25,8 @@
     <a-assets>
       <a-asset-item id="officeObj" src="assets/office.obj"></a-asset-item>
       <a-asset-item id="officeMtl" src="assets/office.mtl"></a-asset-item>
+      <a-asset-item id="employeeObj" src="assets/Nicole_Bonnet.obj"></a-asset-item>
+      <a-asset-item id="employeeMtl" src="assets/Nicole_Bonnet.mtl"></a-asset-item>
       <a-mixin id="checkpoint"></a-mixin>
       <a-mixin id="checkpoint-hovered" color="#6CEEB5"></a-mixin>
       <a-mixin id="noticeBoardInfo" text="align: center; width: 6;
@@ -33,12 +35,15 @@
 
     <!-- Object model of Office -->
     <a-obj-model src="#officeObj" mtl="#officeMtl"></a-obj-model>
+    <a-entity position="18 0 -0.632" rotation="0 46 0" scale="1 0.75 1" obj-model="obj: #employeeObj; mtl: #employeeMtl"></a-entity>
 
     <!-- Checkpoint container -->
-    <a-entity wasd-controls camera="userHeight: 1.6" universal-controls="movementControls: checkpoint" checkpoint-controls="mode: animate">
+    <a-entity position="20.952 1 2.447" rotation="0 50 0" wasd-controls camera="userHeight: 1.6" universal-controls="movementControls: checkpoint" checkpoint-controls="mode: animate">
       <a-entity cursor position="0 0 -1" geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03;" material="color: #CCC; shader: flat;">
       </a-entity>
     </a-entity>
+    <a-entity id="office-welcome" material="opacity: 0; transparent: true" geometry="primitive: plane"
+    position="-2.41 0 -1.24" sound="src: url(assets/welcome.mp3); autoplay: true"></a-entity>
 
     <a-entity id="office-desk1" material="opacity: 0; transparent: true" geometry="primitive: plane"
     position="-2.41 0 -1.24" sound="src: url(assets/Office Ambience.mp3); autoplay: true; loop: true"></a-entity>
@@ -56,7 +61,7 @@
     position="-7.43 0 10.15" sound="src: url(assets/Office Ambience.mp3); autoplay: true; loop: true"></a-entity>
     
     <a-entity id="rest-room" material="opacity: 0; transparent: true" geometry="primitive: plane"
-    position="-13.275 12.33 -0.75" sound="src: url(assets/rest-room.mp3); autoplay: true; loop: true"></a-entity>
+    position="-26.686 -3.914 -6.280" sound="src: url(assets/rest-room.mp3); autoplay: true; loop: true; maxDistance: 500"></a-entity>
 
     <!-- Checkpoints -->
     <a-entity position="1 0 1">
