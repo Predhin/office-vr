@@ -4,11 +4,11 @@ import AframeExtraComponent from "./aframeExtra/aframeExtraComponent";
 export default class PreComponents {
   constructor() {
     // initialize pre-components from here initialised on head tag
-    new LogComponent();
     window.onload = function (){
       console.log("//////document is ready for manupulation///////");
       new MainGateEntryComponent();
-    };    
+    };  
+    new LogComponent();        
     new AframeExtraComponent();
   }
 }
