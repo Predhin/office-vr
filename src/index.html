@@ -25,6 +25,7 @@
     <a-assets>
       <a-asset-item id="officeObj" src="assets/office.obj"></a-asset-item>
       <a-asset-item id="officeMtl" src="assets/office.mtl"></a-asset-item>
+      <video id="carrer_vid" loop="true" src="assets/CarrerCognizant.mp4"></video>
       <a-mixin id="checkpoint"></a-mixin>
       <a-mixin id="checkpoint-hovered" color="#6CEEB5"></a-mixin>
       <a-mixin id="noticeBoardInfo" text="align: center; width: 6;
@@ -36,7 +37,7 @@
     <a-obj-model src="#officeObj" mtl="#officeMtl"></a-obj-model>
 
     <!-- Checkpoint container -->
-    <a-entity  wasd-controls id="sceneCamera" camera="userHeight: 1.6" universal-controls="movementControls: checkpoint" checkpoint-controls="mode: animate">
+    <a-entity position="20.952 1 2.447" rotation="0 50 0"  wasd-controls id="sceneCamera" camera="userHeight: 1.6" universal-controls="movementControls: checkpoint" checkpoint-controls="mode: animate">
       <a-entity cursor position="0 0 -1" geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03;" material="color: #CCC; shader: flat;">
       </a-entity>
     </a-entity>
@@ -50,6 +51,7 @@
       <a-entity id="lobby-tr" geometry="primitive:triangle; vertexA:0 0.5 0; vertexB:-0.5 -0.5 0;vertexC:0.5 -0.5 0" rotation="180 90 0" material="side:double; color:#39BB82" position="12.46 1.2 0.443"></a-entity>  
       <a-cylinder checkpoint="offset: 0 1.6 0" radius="1" height="0.1" position="12.084 0 0.346" color="#39BB82"></a-cylinder>
       <!-- Home -->
+      <a-entity id="home-tr" geometry="primitive:triangle; vertexA:0 0.5 0; vertexB:-0.5 -0.5 0;vertexC:0.5 -0.5 0" rotation="180 90 0" material="side:double; color:#39BB82" position="-3 1.2 0"></a-entity>
       <a-cylinder checkpoint="offset: 0 1.6 0" radius="1" height="0.1" position="-3 0 0" color="#39BB82"></a-cylinder>
       <!-- Toilet(outside) -->
       <a-entity id="tlt-out-tr" geometry="primitive:triangle; vertexA:0 0.5 0; vertexB:-0.5 -0.5 0;vertexC:0.5 -0.5 0" rotation="180 90 0" material="side:double; color:#39BB82" position="-7.95 1.2 1.204"></a-entity>
@@ -76,10 +78,14 @@
       <a-entity id="manager-out-tr" geometry="primitive:triangle; vertexA:0 0.5 0; vertexB:-0.5 -0.5 0;vertexC:0.5 -0.5 0" rotation="180 0 0" material="side:double; color:#39BB82" position="5.757 2.5 8.055"></a-entity>
       <a-cylinder checkpoint="offset: 0 1.6 0" radius="1" height="0.1" position="5.924 0.849 8.718" color="#39BB82"></a-cylinder>
       <!-- Exit office -->
-      <a-entity id="exit-tr" geometry="primitive:triangle; vertexA:0 0.5 0; vertexB:-0.5 -0.5 0;vertexC:0.5 -0.5 0" rotation="180 90 0" material="side:double; color:#39BB82" position="19 2 -2.22"></a-entity>
+      <a-entity id="exit-tr" geometry="primitive:triangle; vertexA:0 0.5 0; vertexB:-0.5 -0.5 0;vertexC:0.5 -0.5 0" rotation="180 90 0" material="side:double; color:#39BB82" position="20 2 -3.01"></a-entity>
       <a-cylinder checkpoint="offset: 0 1.6 0" radius="1" height="0.1" position="20.075 0 -2.811" color="#39BB82"></a-cylinder>
     </a-entity>
-
+    <a-entity id="monitor" on-projector geometry="primitive:plane; width:0.7; height: 0.5" rotation="0 -75 0" position="-9.32 1.932 8.934" material="opacity:0.0; transparent:true">            
+    </a-entity>
+    <a-entity id="projector">
+      <a-video src="#carrer_vid" width="3" height="2" rotation="0 -90 0" position="0.758 2.405 9.875"></a-video>
+    </a-entity>
     <!-- Info texts -->
     <a-text position="4.14 3.3 -7" color="red" mixin="noticeBoardInfo" font="kelsonsans"></a-text>
 
