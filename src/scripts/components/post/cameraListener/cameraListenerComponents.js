@@ -9,7 +9,6 @@ export default class CameraListenerComponents{
             //console.log(evt.detail.newData);
             console.log(evt.detail.target.getAttribute('position'));
             positionObj = evt.detail.target.getAttribute('position');
-<<<<<<< HEAD
             sceneName = this.getAttribute("scene-name");
             if(sceneName === 'in'){
                 //Notice Board
@@ -147,6 +146,20 @@ export default class CameraListenerComponents{
                 else{
                     document.getElementById('exit-tr').setAttribute('visible', true);
                     document.getElementById('exit-chk').setAttribute('visible', true);   
+                }
+
+
+                //office-bay-out
+                if(positionObj.x>20.30770564550668  && positionObj.x<22.028883144080968 && positionObj.z<-2.177395621056991){
+                    var location = window.location.href; 
+                    location = location.split("/");
+                    if(location.length>1){
+                        location[location.length-1] = "outside.html";
+                    }  
+                    setTimeout(function() {
+                        window.location.href = location.join("/");
+                    }, 0);    
+                    //document.getElementById('tlt-in-tr').setAttribute('visible', false);
                 }
 
             }
