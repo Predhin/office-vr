@@ -8,12 +8,11 @@
   },
   "scripts": {
     "clean": "rimraf dist/*",
-    "prebuild": "npm run clean -s",
     "predev": "npm run clean -s",
-    "build": "webpack --config webpack-prod.config.js",
+    "build": "webpack --config webpack-prod.config.js --colors",
     "dev": "webpack-dev-server --open --config webpack-dev.config.js --watch --colors",
     "start": "npm-run-all build server",
-    "server": "node --optimize_for_size --max_old_space_size=460 server.js"
+    "server": "node server.js"
   },
   "repository": {
     "type": "git",
