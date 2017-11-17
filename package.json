@@ -3,12 +3,8 @@
   "version": "1.0.0",
   "description": "A vr simulator application",
   "main": "server.js",
-  "engines": {
-    "node": "6.2.0"
-  },
   "scripts": {
     "clean": "rimraf dist/*",
-    "prebuild": "npm run clean -s",
     "predev": "npm run clean -s",
     "build": "webpack --config webpack-prod.config.js --colors",
     "dev": "webpack-dev-server --open --config webpack-dev.config.js --watch --colors",
@@ -54,7 +50,7 @@
     "sass-loader": "^6.0.6",
     "style-loader": "^0.18.2",
     "uglifyjs-webpack-plugin": "^1.0.1",
-    "webpack": "^3.5.6",
+    "webpack": "^3.8.1",
     "webpack-dev-server": "^2.7.1"
   },
   "dependencies": {

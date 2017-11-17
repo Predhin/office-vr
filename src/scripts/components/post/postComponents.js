@@ -1,7 +1,7 @@
 import Comp1Component from "./comp1/comp1Component";
 import NoticeBoardComponent from "./noticeBoard/noticeBoardComponent";
 import ClockComponent from "./clock/clockComponent.js";
-import CameraListenerComponent from "./cameraListener/CameraListenerComponents.js";
+import CameraListenerComponent from "./cameraListener/cameraListenerComponents.js";
 import ProjectorComponent from "./projector/projectorComponent.js";
 export default class PostComponents {
   constructor() {
