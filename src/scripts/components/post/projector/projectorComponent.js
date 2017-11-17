@@ -8,7 +8,7 @@ export default class ProjectorComponents{
                 var el = this.el;
                 var play = false;
                 el.addEventListener('click',function (){
-                    console.log('Clicked Monitor');  
+                    console.log('Clicked Monitor');
                     if(play){
                         console.log('pause'); 
                         play=false;
