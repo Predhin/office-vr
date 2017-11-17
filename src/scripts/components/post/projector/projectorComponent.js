@@ -12,14 +12,37 @@ export default class ProjectorComponents{
                     if(play){
                         console.log('pause'); 
                         play=false;
+                        soundCtrl('play');
                         document.getElementById('carrer_vid').pause();
                     } else{
                         console.log('play');
                         play=true; 
+                        soundCtrl('pause');
                         document.getElementById('carrer_vid').play();
                     }
                     
+                });   
+                
+                //sound on all the backgroud sounds when scene is ready
+                document.querySelector('a-scene').addEventListener('loaded', function (){
+                    setTimeout(function() {
+                        soundCtrl('play',true);
+                    }, 1000); 
                 });
+                function soundCtrl(action,isFirstTime){
+                    var soundEl = document.querySelectorAll('a-entity[sound]');
+                    for(var s=0; s<soundEl.length; s++){
+                        if(isFirstTime || (!isFirstTime && soundEl[s].id !=='office-welcome')){
+                            if(action === 'play'){
+                                soundEl[s].components.sound.playSound();
+                            }
+                            if(action === 'pause'){
+                                soundEl[s].components.sound.pauseSound();
+                            }
+                        }
+                    }
+                    //document.getElementById('carrer_vid').play();
+                }
             }
         });
     }

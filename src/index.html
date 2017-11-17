@@ -37,34 +37,34 @@
 
     <!-- Object model of Office -->
     <a-obj-model src="#officeObj" mtl="#officeMtl"></a-obj-model>
-    <a-entity position="18 0 -0.632" rotation="0 46 0" scale="1 0.75 1" obj-model="obj: #employeeObj; mtl: #employeeMtl"></a-entity>
+    <a-entity position="18 0 -3.407" rotation="0 46 0" scale="1 0.75 1" obj-model="obj: #employeeObj; mtl: #employeeMtl"></a-entity>
 
     <!-- Checkpoint container -->
-    <a-entity position="20.952 1 2.447" rotation="0 50 0"  wasd-controls id="sceneCamera" camera="userHeight: 1.6" universal-controls="movementControls: checkpoint" checkpoint-controls="mode: animate">
+    <a-entity position="20.952 1 2.447" rotation="0 50 0"  wasd-controls id="sceneCamera"  scene-name='in' camera="userHeight: 1.6" universal-controls="movementControls: checkpoint" checkpoint-controls="mode: animate">
 
       <a-entity cursor position="0 0 -1" geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03;" material="color: #CCC; shader: flat;">
       </a-entity>
     </a-entity>
     <a-entity id="office-welcome" material="opacity: 0; transparent: true" geometry="primitive: plane"
-    position="-2.41 0 -1.24" sound="src: url(assets/welcome.mp3); autoplay: true"></a-entity>
+    position="-2.41 0 -1.24" sound="src: url(assets/welcome.mp3); autoplay: false"></a-entity>
 
     <a-entity id="office-desk1" material="opacity: 0; transparent: true" geometry="primitive: plane"
-    position="-2.41 0 -1.24" sound="src: url(assets/Office Ambience.mp3); autoplay: true; loop: true"></a-entity>
+    position="-2.41 0 -1.24" sound="src: url(assets/Office Ambience.mp3); autoplay: false; loop: true"></a-entity>
 
     <a-entity id="office-desk2" material="opacity: 0; transparent: true" geometry="primitive: plane"
-    position="-2.41 0 -11.392" sound="src: url(assets/Office Ambience.mp3); autoplay: true; loop: true"></a-entity>
+    position="-2.41 0 -11.392" sound="src: url(assets/Office Ambience.mp3); autoplay: false; loop: true"></a-entity>
 
     <a-entity id="front-office-desk" material="opacity: 0; transparent: true" geometry="primitive: plane"
-    position="11.27 0 -4.50" sound="src: url(assets/front-office.mp3); autoplay: true; loop: true"></a-entity>
+    position="11.27 0 -4.50" sound="src: url(assets/front-office.mp3); autoplay: false; loop: true"></a-entity>
 
     <a-entity id="meeting-room" material="opacity: 0; transparent: true" geometry="primitive: plane"
-    position="6.292 0 10.15" sound="src: url(assets/Office Ambience.mp3); autoplay: true; loop: true"></a-entity>
+    position="6.292 0 10.15" sound="src: url(assets/Office Ambience.mp3); autoplay: false; loop: true"></a-entity>
 
     <a-entity id="conference-desk" material="opacity: 0; transparent: true" geometry="primitive: plane"
-    position="-7.43 0 10.15" sound="src: url(assets/Office Ambience.mp3); autoplay: true; loop: true"></a-entity>
+    position="-7.43 0 10.15" sound="src: url(assets/Office Ambience.mp3); autoplay: false; loop: true"></a-entity>
     
     <a-entity id="rest-room" material="opacity: 0; transparent: true" geometry="primitive: plane"
-    position="-40.686 -3.914 -6.280" sound="src: url(assets/rest-room.mp3); autoplay: true; loop: true"></a-entity>
+    position="-40.686 -3.914 -6.280" sound="src: url(assets/rest-room.mp3); autoplay: false; loop: true"></a-entity>
 
     <!-- Checkpoints -->
     <a-entity position="1 0 1">
@@ -103,7 +103,7 @@
       <a-cylinder checkpoint="offset: 0 1.6 0" radius="1" height="0.1" position="5.924 0.849 8.718" color="#39BB82"></a-cylinder>
       <!-- Exit office -->
       <a-entity id="exit-tr" geometry="primitive:triangle; vertexA:0 0.5 0; vertexB:-0.5 -0.5 0;vertexC:0.5 -0.5 0" rotation="180 90 0" material="side:double; color:#39BB82" position="20 2 -3.01"></a-entity>
-      <a-cylinder checkpoint="offset: 0 1.6 0" radius="1" height="0.1" position="20.075 0 -2.811" color="#39BB82"></a-cylinder>
+      <a-cylinder checkpoint="offset: 0 1.6 0" radius="1" height="0.1" position="20.846 0 -3.446" color="#39BB82"></a-cylinder>
     </a-entity>
     <a-entity id="monitor" on-projector geometry="primitive:plane; width:0.7; height: 0.5" rotation="0 -75 0" position="-9.32 1.932 8.934" material="opacity:0.0; transparent:true">            
     </a-entity>
