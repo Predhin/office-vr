@@ -85,7 +85,8 @@ export default class CameraListenerComponents{
                 }else if(positionObj.z < 5){
                     document.getElementById('meeting-out-chk').setAttribute('visible', false);
                     document.getElementById('carrer_vid').load();
-                    document.getElementById('carrer_vid').pause();    
+                    document.getElementById('carrer_vid').pause();
+                    document.getElementById('videoSound').components.sound.stopSound();    
                 } else{
                     document.getElementById('meeting-out-tr').setAttribute('visible', true);
                     document.getElementById('meeting-out-chk').setAttribute('visible', true);   

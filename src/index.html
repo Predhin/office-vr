@@ -28,6 +28,7 @@
       <a-asset-item id="employeeObj" src="assets/Nicole_Bonnet.obj"></a-asset-item>
       <a-asset-item id="employeeMtl" src="assets/Nicole_Bonnet.mtl"></a-asset-item>
       <video id="carrer_vid" loop="true" muted playsinline src="assets/CarrerCognizant.mp4" loop crossorigin="anonymous" webkit-playsinline></video>
+      <audio id="carrer_audio" src="assets/CarrerCognizant.mp3"></audio>
       <a-mixin id="checkpoint"></a-mixin>
       <a-mixin id="checkpoint-hovered" color="#6CEEB5"></a-mixin>
       <a-mixin id="noticeBoardInfo" text="align: center; width: 6;
@@ -126,6 +127,8 @@
 
     <a-entity id="projector">
       <a-video src="#carrer_vid" width="3" height="2" rotation="0 -90 0" position="0.758 2.405 9.875"></a-video>
+      <a-sound id="videoSound" material="opacity: 0; transparent: true" position="0.758 2.405 9.875"
+       src="#carrer_audio" autoplay="false" volume="3"></a-sound>
     </a-entity>
     <!-- Info texts -->
     <a-text id="notice-board-txt" position="4.14 3.3 -7" color="red" mixin="noticeBoardInfo" font="kelsonsans"></a-text>

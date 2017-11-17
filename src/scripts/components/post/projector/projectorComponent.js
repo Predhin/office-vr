@@ -14,11 +14,13 @@ export default class ProjectorComponents{
                         play=false;
                         soundCtrl('play');
                         document.getElementById('carrer_vid').pause();
+                        document.getElementById('videoSound').components.sound.pauseSound();
                     } else{
                         console.log('play');
                         play=true; 
                         soundCtrl('pause');
                         document.getElementById('carrer_vid').play();
+                        document.getElementById('videoSound').components.sound.playSound();
                     }
                     
                 });   
