@@ -3,9 +3,6 @@
   "version": "1.0.0",
   "description": "A vr simulator application",
   "main": "server.js",
-  "engines": {
-    "node": "6.2.0"
-  },
   "scripts": {
     "clean": "rimraf dist/*",
     "predev": "npm run clean -s",
