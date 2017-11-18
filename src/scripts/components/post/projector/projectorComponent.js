@@ -15,17 +15,15 @@ export default class ProjectorComponents{
                         soundCtrl('play');
                         //document.getElementById('aframe_video').components.material.material.map.image.pause();
                         document.getElementById('carrer_vid').pause();
-                        //document.getElementById('carrer_audio').pause();
-                        document.getElementById('videoSound').components.sound.pauseSound();
+                        document.getElementById('videoSound').components.sound.stopSound();
                     } else{
                         console.log('play');
                         play=true; 
                         soundCtrl('pause');
                         //document.getElementById('aframe_video').components.material.material.map.image.play();
-                        document.getElementById('carrer_vid').src="assets/CarrerCognizant.mp4";
+                        document.getElementById('carrer_vid').load();
                         document.getElementById('carrer_vid').play();
-                        //document.getElementById('carrer_audio').play();
-                        //document.getElementById('videoSound').components.sound.playSound();
+                        document.getElementById('videoSound').components.sound.playSound();
                     }
                     
                 });   

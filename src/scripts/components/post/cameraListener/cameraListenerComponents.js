@@ -88,9 +88,9 @@ export default class CameraListenerComponents{
                     //document.getElementById('aframe_video').components.material.material.map.image.pause();
                     document.getElementById('carrer_vid').load();
                     document.getElementById('carrer_vid').pause();
-                    document.getElementById('carrer_audio').load();
-                    document.getElementById('carrer_audio').pause();
-                    //document.getElementById('videoSound').components.sound.stopSound();    
+                    //document.getElementById('carrer_audio').load();
+                    //document.getElementById('carrer_audio').pause();
+                    document.getElementById('videoSound').components.sound.stopSound();    
                 } else{
                     document.getElementById('meeting-out-tr').setAttribute('visible', true);
                     document.getElementById('meeting-out-chk').setAttribute('visible', true);   
