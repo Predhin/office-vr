@@ -13,14 +13,14 @@ export default class ProjectorComponents{
                         console.log('pause'); 
                         play=false;
                         soundCtrl('play');
-                        document.getElementById('carrer_vid').pause();
-                        document.getElementById('videoSound').components.sound.pauseSound();
+                        document.getElementById('aframe_video').components.material.material.map.image.pause();
+                        //document.getElementById('videoSound').components.sound.pauseSound();
                     } else{
                         console.log('play');
                         play=true; 
                         soundCtrl('pause');
-                        document.getElementById('carrer_vid').play();
-                        document.getElementById('videoSound').components.sound.playSound();
+                        document.getElementById('aframe_video').components.material.material.map.image.play();
+                        //document.getElementById('videoSound').components.sound.playSound();
                     }
                     
                 });   
