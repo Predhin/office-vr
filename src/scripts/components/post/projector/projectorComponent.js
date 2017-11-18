@@ -13,13 +13,17 @@ export default class ProjectorComponents{
                         console.log('pause'); 
                         play=false;
                         soundCtrl('play');
-                        document.getElementById('aframe_video').components.material.material.map.image.pause();
+                        //document.getElementById('aframe_video').components.material.material.map.image.pause();
+                        document.getElementById('carrer_vid').pause();
+                        document.getElementById('carrer_audio').pause();
                         //document.getElementById('videoSound').components.sound.pauseSound();
                     } else{
                         console.log('play');
                         play=true; 
                         soundCtrl('pause');
-                        document.getElementById('aframe_video').components.material.material.map.image.play();
+                        //document.getElementById('aframe_video').components.material.material.map.image.play();
+                        document.getElementById('carrer_vid').play();
+                        document.getElementById('carrer_audio').play();
                         //document.getElementById('videoSound').components.sound.playSound();
                     }
                     
