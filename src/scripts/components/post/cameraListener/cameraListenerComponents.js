@@ -11,7 +11,7 @@ export default class CameraListenerComponents {
             }
             var location;
             //console.log(evt.detail.newData);
-            console.log(evt.detail.target.getAttribute('position'));
+            //console.log(evt.detail.target.getAttribute('position'));
             positionObj = evt.detail.target.getAttribute('position');
             sceneName = this.getAttribute("scene-name");
             if (sceneName === 'in') {
