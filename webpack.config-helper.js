@@ -29,6 +29,12 @@ module.exports = (options) => {
           NODE_ENV: JSON.stringify(options.isProduction ? 'production' : 'development')
         }
       }),
+      /*new HtmlWebpackPlugin({
+        template: './src/index.html',
+        filename: 'index.html',
+        inject: 'body',
+        excludeChunks: ['vendor', 'preapp']
+      }),*/
       new HtmlWebpackPlugin({
         template: './src/index.html',
         filename: 'index.html',
@@ -36,13 +42,7 @@ module.exports = (options) => {
         excludeChunks: ['vendor', 'preapp']
       }),
       new HtmlWebpackPlugin({
-        template: './src/outside.html',
-        filename: 'outside.html',
-        inject: 'body',
-        excludeChunks: ['vendor', 'preapp']
-      }),
-      new HtmlWebpackPlugin({
-        template: './src/index.html',
+        template: './src/office.html',
         filename: 'office.html',
         inject: 'body',
         excludeChunks: ['vendor', 'preapp']
@@ -66,12 +66,22 @@ module.exports = (options) => {
     // webpackConfig.entry = ['./src/scripts/vendor'];
 
     webpackConfig.plugins.push(
-      new CopyWebpackPlugin([
-        { from: './src/assets/**/*', to: 'assets', flatten: true },
-        { from: 'src/favicon.ico' },
-        { from: 'src/favicon.png' }
+      new CopyWebpackPlugin([{
+          from: './src/assets/**/*',
+          to: 'assets',
+          flatten: true
+        },
+        {
+          from: 'src/favicon.ico'
+        },
+        {
+          from: 'src/favicon.png'
+        }
       ]),
       new UglifyJSPlugin(),
+      new webpack.DefinePlugin({
+        LOCAL_WEBPACK_BUILD: false
+      }),
       ExtractSASS
     );
 
@@ -82,11 +92,21 @@ module.exports = (options) => {
 
   } else {
     webpackConfig.plugins.push(
-      new CopyWebpackPlugin([
-        { from: './src/assets/**/*', to: 'assets', flatten: true },
-        { from: 'src/favicon.ico' },
-        { from: 'src/favicon.png' }
+      new CopyWebpackPlugin([{
+          from: './src/assets/**/*',
+          to: 'assets',
+          flatten: true
+        },
+        {
+          from: 'src/favicon.ico'
+        },
+        {
+          from: 'src/favicon.png'
+        }
       ]),
+      new webpack.DefinePlugin({
+        LOCAL_WEBPACK_BUILD: true
+      }),
       new Webpack.HotModuleReplacementPlugin()
     );
 
@@ -94,10 +114,10 @@ module.exports = (options) => {
       test: /\.scss$/i,
       use: ['style-loader', 'css-loader', 'sass-loader']
     }, {
-        test: /\.js$/,
-        use: 'eslint-loader',
-        exclude: /node_modules/
-      });
+      test: /\.js$/,
+      use: 'eslint-loader',
+      exclude: /node_modules/
+    });
 
     webpackConfig.devServer = {
       contentBase: dest,

@@ -8,17 +8,22 @@ export default class ProjectorComponents{
                 var el = this.el;
                 var play = false;
                 el.addEventListener('click',function (){
-                    console.log('Clicked Monitor');  
+                    console.log('Clicked Monitor');
                     if(play){
                         console.log('pause'); 
                         play=false;
                         soundCtrl('play');
+                        //document.getElementById('aframe_video').components.material.material.map.image.pause();
                         document.getElementById('carrer_vid').pause();
+                        document.getElementById('videoSound').components.sound.stopSound();
                     } else{
                         console.log('play');
                         play=true; 
                         soundCtrl('pause');
+                        //document.getElementById('aframe_video').components.material.material.map.image.play();
+                        document.getElementById('carrer_vid').load();
                         document.getElementById('carrer_vid').play();
+                        document.getElementById('videoSound').components.sound.playSound();
                     }
                     
                 });   
