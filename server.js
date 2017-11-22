@@ -12,8 +12,8 @@ app.get('/', function (req, res) {
     res.sendFile(path.join(__dirname + '/dist/index.html'));
 });
 
-app.get('/outside', function (req, res) {
-    res.sendFile(path.join(__dirname + '/dist/outside.html'));
+app.get('/outside', function (req, res) {out
+    res.sendFile(path.join(__dirname + '/dist/index.html'));
 });
 
 app.get('/office', function (req, res) {
