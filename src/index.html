@@ -46,6 +46,9 @@
 
       <a-entity cursor position="0 0 -1" geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03;" material="color: #CCC; shader: flat;">
       </a-entity>
+      <a-image src="assets/fire_notice.png" id="notice_image1" position="0.8 0.2 -1" visible="false"></a-image>
+      <a-image src="assets/Nov_Cal.png" id="notice_image2" position="0.8 0.2 -1" visible="false"></a-image>        
+      <a-image src="assets/ideas.jpg" id="notice_image3" position="0.8 0.2 -1" visible="false"></a-image>        
     </a-entity>
     <a-entity id="office-welcome" material="opacity: 0; transparent: true" geometry="primitive: plane"
     position="-2.41 0 -1.24" sound="src: url(assets/welcome.mp3); autoplay: false"></a-entity>
@@ -80,8 +83,8 @@
       <a-cylinder id="lobby-chk" checkpoint="offset: 0 1.6 0" radius="1" height="0.1" position="12.084 0 0.346" color="#39BB82"></a-cylinder>
       <!-- Home -->
       <a-entity id="home-tr" geometry="primitive:triangle; vertexA:0 0.5 0; vertexB:-0.5 -0.5 0;vertexC:0.5 -0.5 0" rotation="180 90 0"
-        material="side:double; color:#39BB82" position="-3 1.2 0"></a-entity>
-      <a-cylinder id="home-chk" checkpoint="offset: 0 1.6 0" radius="1" height="0.1" position="-3 0 0" color="#39BB82"></a-cylinder>
+        material="side:double; color:#39BB82" position="3.3 1.2 0"></a-entity>
+      <a-cylinder id="home-chk" checkpoint="offset: 0 1.6 0" radius="1" height="0.1" position="3.368 0 0" color="#39BB82"></a-cylinder>
       <!-- Toilet(outside) -->
       <a-entity id="tlt-out-tr" geometry="primitive:triangle; vertexA:0 0.5 0; vertexB:-0.5 -0.5 0;vertexC:0.5 -0.5 0" rotation="180 90 0"
         material="side:double; color:#39BB82" position="-7.95 1.2 1.546"></a-entity>

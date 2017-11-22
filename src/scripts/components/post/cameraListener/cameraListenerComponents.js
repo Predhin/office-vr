@@ -35,7 +35,7 @@ export default class CameraListenerComponents{
 
 
                 //Home
-                if(positionObj.x>-5 && positionObj.x<-1 && positionObj.z<1.5 && positionObj.z >-1.5){
+                if(positionObj.x<5.3 && positionObj.x>0.5 && positionObj.z<1.5 && positionObj.z >-1.5){
                     document.getElementById('home-tr').setAttribute('visible', false);
                     document.getElementById('home-chk').setAttribute('visible', false);
                 }
