@@ -35,7 +35,7 @@
     <a-obj-model src="#buildingObj" mtl="#buildingMtl"></a-obj-model>
 
     <a-entity>    
-      <a-camera id="sceneCamera" scene-name='out' position="0 -1 4" wasd-controls universal-controls="movementControls: checkpoint" checkpoint-controls="mode: animate">
+      <a-camera id="sceneCamera" scene-name='out' position="0 -1 4" user-height="1.1" wasd-controls universal-controls="movementControls: checkpoint" checkpoint-controls="mode: animate">
           <a-cursor position="0 0 -1"></a-cursor>
       </a-camera>
     </a-entity> 
@@ -52,7 +52,7 @@
     <!-- Checkpoints -->
     <a-entity>
       <!-- Main Gate -->
-      <a-box checkpoint="offset: 0 1.5 0" id="main-gate-entry" main-gate-entry="" depth="0" width="0.280" height="0.450" position="0 0 0.600" color="#6F7073" material="opacity: 0; transparent: true"></a-box>
+      <a-box checkpoint="offset: 0 0 0" id="main-gate-entry" main-gate-entry="" depth="0" width="0.290" height="0.220" position="0 0.1 0.600" color="#6F7073" material="opacity: 0; transparent: true"></a-box>
     </a-entity>
 
 

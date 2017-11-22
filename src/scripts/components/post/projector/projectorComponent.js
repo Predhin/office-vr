@@ -27,7 +27,7 @@ export default class ProjectorComponents{
                 document.querySelector('a-scene').addEventListener('loaded', function (){
                     setTimeout(function() {
                         soundCtrl('play',true);
-                    }, 1000); 
+                    }, 2000); 
                 });
                 function soundCtrl(action,isFirstTime){
                     var soundEl = document.querySelectorAll('a-entity[sound]');
