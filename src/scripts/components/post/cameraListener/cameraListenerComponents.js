@@ -152,18 +152,14 @@ export default class CameraListenerComponents {
 
 
                 //office-bay-out
-                if (positionObj.x > 20.30770564550668 && positionObj.x < 22.028883144080968 && positionObj.z < -2.177395621056991) {
+                /*if (positionObj.x > 20.30770564550668 && positionObj.x < 22.028883144080968 && positionObj.z < -2.177395621056991) {
                     location = window.location.href;
                     location = location.split("/");
                     if (location.length > 1) {
-                        // location[location.length-1] = "outside.html";
                         location[location.length - 1] = AppConstants.LANDING_ROUTE();
                     }
-                    //setTimeout(function () {
                         window.location.href = location.join("/");
-                    //}, 0);
-                    //document.getElementById('tlt-in-tr').setAttribute('visible', false);
-                }
+                }*/
 
             } else if (sceneName === 'out') {
                 //office-bay-in
@@ -171,13 +167,9 @@ export default class CameraListenerComponents {
                     location = window.location.href;
                     location = location.split("/");
                     if (location.length > 1) {
-                        // location[location.length-1] = "index.html";
                         location[location.length - 1] = AppConstants.OFFICE_ROUTE();
                     }
-                    //setTimeout(function () {
                         window.location.href = location.join("/");
-                    //}, 0);
-                    //document.getElementById('tlt-in-tr').setAttribute('visible', false);
                 }
             }
 
