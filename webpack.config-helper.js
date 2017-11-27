@@ -40,13 +40,13 @@ module.exports = (options) => {
         filename: 'index.html',
         inject: 'body',
         excludeChunks: ['vendor', 'preapp']
-      }),
-      new HtmlWebpackPlugin({
+      })
+      /*new HtmlWebpackPlugin({
         template: './src/office.html',
         filename: 'office.html',
         inject: 'body',
         excludeChunks: ['vendor', 'preapp']
-      })
+      })*/
     ],
     module: {
       rules: [{
