@@ -4,7 +4,7 @@ export default class CameraListenerComponents {
         this.init();
     }
     init() {
-        var positionObj,enteredMeetingRoom;
+        var positionObj;
         document.getElementById('sceneCamera').addEventListener('componentchanged', function (evt, a, b) {
             if (evt.detail.name !== 'position') {
                 return;
@@ -69,7 +69,7 @@ export default class CameraListenerComponents {
                 document.getElementById('meeting-in-tr').setAttribute('visible', false);
                 document.getElementById('meeting-in-chk').setAttribute('visible', false);                
             } else if (positionObj.z > 5) {
-                enteredMeetingRoom = true;                
+                //enteredMeetingRoom = true;                
                 document.getElementById('meeting-in-chk').setAttribute('visible', false);
             } else {
                 document.getElementById('meeting-in-tr').setAttribute('visible', true);
@@ -92,13 +92,13 @@ export default class CameraListenerComponents {
                 //document.getElementById('carrer_audio').load();
                 //document.getElementById('carrer_audio').pause();
                 document.getElementById('videoSound').components.sound.stopSound();
-                var soundEl = document.querySelectorAll('a-entity[sound]');
+                /*var soundEl = document.querySelectorAll('a-entity[sound]');
                 for (var s = 0; s < soundEl.length; s++) {
                     if (enteredMeetingRoom && soundEl[s].id !== 'office-welcome') {
                         soundEl[s].components.sound.playSound();
                     }
                 }
-                enteredMeetingRoom = false;
+                enteredMeetingRoom = false;*/
                 //document.getElementById('carrer_vid').play();
 
             } else {
