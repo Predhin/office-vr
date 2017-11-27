@@ -12,7 +12,7 @@ export default class ProjectorComponents{
                     if(play){
                         console.log('pause'); 
                         play=false;
-                        soundCtrl('play');
+                        //soundCtrl('play');
                         // document.getElementById('aframe_video').components.material.material.map.image.pause();
                         document.getElementById('carrer_vid').pause();                        
                         document.getElementById('videoSound').components.sound.stopSound();
@@ -34,6 +34,15 @@ export default class ProjectorComponents{
                         soundCtrl('play',true);
                     }, 2000); 
                 });
+
+                 
+                
+                //sound on all the backgroud sounds when scene is ready
+                document.getElementById('videoSound').addEventListener('sound-ended', function (){
+                    soundCtrl('play'); 
+                });
+
+
                 function soundCtrl(action,isFirstTime){
                     var soundEl = document.querySelectorAll('a-entity[sound]');
                     for(var s=0; s<soundEl.length; s++){
