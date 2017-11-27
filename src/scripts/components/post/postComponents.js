@@ -1,5 +1,6 @@
 import Comp1Component from "./comp1/comp1Component";
 import NoticeBoardComponent from "./noticeBoard/noticeBoardComponent";
+import EmployeeMOdelComponent from "./employeeModel/employeeModelComponent";
 import ClockComponent from "./clock/clockComponent.js";
 import CameraListenerComponent from "./cameraListener/cameraListenerComponents.js";
 import ProjectorComponent from "./projector/projectorComponent.js";
@@ -14,6 +15,7 @@ export default class PostComponents {
     AFRAME.registerComponent('load-custom-scene',{
       init:function (){
         new NoticeBoardComponent();
+        new EmployeeMOdelComponent();
         new ClockComponent();
       }
     });
