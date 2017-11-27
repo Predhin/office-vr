@@ -11,7 +11,7 @@ export default class CameraListenerComponents {
             }
             var location;
             //console.log(evt.detail.newData);
-            console.log(evt.detail.target.getAttribute('position'));
+            //console.log(evt.detail.target.getAttribute('position'));
             positionObj = evt.detail.target.getAttribute('position');
             //Notice Board
             if (positionObj.x > 3 && positionObj.x < 4.6 && positionObj.z < -5.8 && positionObj.z > -8) {
