@@ -5,6 +5,7 @@ import ClockComponent from "./clock/clockComponent.js";
 import CameraListenerComponent from "./cameraListener/cameraListenerComponents.js";
 import ProjectorComponent from "./projector/projectorComponent.js";
 import EntryMonitorComponent from "./entryMonitor/entryMonitorComponent.js";
+import OfficeEmployeeComponent from "./officeEmployee/officeEmployeeComponent.js";
 export default class PostComponents {
   constructor() {
     // initialize post-components from here initialised just before body end tag
@@ -18,6 +19,7 @@ export default class PostComponents {
         new NoticeBoardComponent();
         new EmployeeMOdelComponent();
         new ClockComponent();
+        new OfficeEmployeeComponent();
       }
     });
     new CameraListenerComponent();
