@@ -68,8 +68,8 @@ export default class ClockComponent{
                     var min = d.getMinutes();
                     var time = 'Time is :  '+hr+' : '+min;
                     createdEl = document.createElement('a-entity');
-                    createdEl.setAttribute('text',{value:time, color:'red'});
-                    createdEl.setAttribute('position',{x:0.5,y:0.2,z:-0.8});
+                    createdEl.setAttribute('text',{value:time, color:'red', font:'Orbitron'});
+                    createdEl.setAttribute('position',{x:0.3,y:0.05,z:-0.9});
                     cameraElement.appendChild(createdEl);
                 });
                   el.addEventListener('mouseleave', function (){
