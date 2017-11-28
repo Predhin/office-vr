@@ -1,4 +1,3 @@
-import AppConstants from "../../../constants/appConstants";
 export default class CameraListenerComponents {
     constructor() {
         this.init();
