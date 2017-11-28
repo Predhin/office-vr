@@ -20,6 +20,7 @@ export default class ProjectorComponents{
                         console.log('play');
                         play=true; 
                         soundCtrl('pause');
+                        document.getElementById('soundEntry').components.sound.stopSound();
                         // document.getElementById('aframe_video').components.material.material.map.image.play();
                         document.getElementById('carrer_vid').load();
                         document.getElementById('carrer_vid').play();
