@@ -27,6 +27,8 @@
       <a-asset-item id="officeMtl" src="assets/office.mtl"></a-asset-item>
       <a-asset-item id="employeeObj" src="assets/Nicole_Bonnet.obj"></a-asset-item>
       <a-asset-item id="employeeMtl" src="assets/Nicole_Bonnet.mtl"></a-asset-item>
+      <a-asset-item id="officeGuyObj" src="assets/office-guy.obj"></a-asset-item>
+      <a-asset-item id="officeGuyMtl" src="assets/office-guy.mtl"></a-asset-item>
       <video id="carrer_vid" muted playsinline src="assets/CarrerCognizant.mp4" crossorigin="anonymous" webkit-playsinline></video>
       <audio id="carrer_audio" src="assets/CarrerCognizant.mp3"></audio>
       <a-mixin id="checkpoint"></a-mixin>
@@ -40,6 +42,8 @@
     <!-- Object model of Office -->
     <a-obj-model src="#officeObj" mtl="#officeMtl"></a-obj-model>
     <a-entity position="18 0 -3.407" rotation="0 46 0" scale="1 0.75 1" obj-model="obj: #employeeObj; mtl: #employeeMtl"></a-entity>
+    <a-entity position="6.854 -0.021 13.195" rotation="0 -174.809 0" scale="1 0.75 1" obj-model="obj: #employeeObj; mtl: #employeeMtl"></a-entity>
+    <a-entity position="4.067 0.496 -10.103" rotation="0 -2.349 0" scale="0.015 0.015 0.020" obj-model="obj: #officeGuyObj; mtl: #officeGuyMtl"></a-entity>
 
     <!-- Checkpoint container -->
     <a-entity position="20.6 1 -1.084" rotation="0 50 0" wasd-controls id="sceneCamera" scene-name='in' camera="userHeight: 1.6"
