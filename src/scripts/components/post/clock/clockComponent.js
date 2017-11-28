@@ -66,10 +66,12 @@ export default class ClockComponent{
                     var d = new Date();
                     var hr = d.getHours();
                     var min = d.getMinutes();
+                    hr = hr < 10 ? '0'+hr : hr; 
+                    min = min < 10 ? '0'+min : min;
                     var time = 'Time is :  '+hr+' : '+min;
                     createdEl = document.createElement('a-entity');
-                    createdEl.setAttribute('text',{value:time, color:'red'});
-                    createdEl.setAttribute('position',{x:0.5,y:0.2,z:-0.8});
+                    createdEl.setAttribute('text',{value:time, color:'#EF3701'});
+                    createdEl.setAttribute('position',{x:0.3,y:0.05,z:-0.7});
                     cameraElement.appendChild(createdEl);
                 });
                   el.addEventListener('mouseleave', function (){
