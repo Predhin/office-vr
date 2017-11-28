@@ -46,7 +46,7 @@ export default class ProjectorComponents{
                 function soundCtrl(action,isFirstTime){
                     var soundEl = document.querySelectorAll('a-entity[sound]');
                     for(var s=0; s<soundEl.length; s++){
-                        if(isFirstTime || (!isFirstTime && soundEl[s].id !=='office-welcome')){
+                        if((isFirstTime || (!isFirstTime && soundEl[s].id !=='office-welcome')) && soundEl[s].id !== 'manager-voice'){
                             if(action === 'play'){
                                 soundEl[s].components.sound.playSound();
                             }
