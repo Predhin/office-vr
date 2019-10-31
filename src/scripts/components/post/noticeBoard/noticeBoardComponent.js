@@ -66,54 +66,45 @@ export default class NoticeBoardComponent {
       AFRAME.registerComponent('get-notice1-mosein', {
           init: function () {
             var el = this.el;
-            var cameraElement = document.getElementById('sceneCamera');  
-            var createdEl;
+            var imageEl;
             el.addEventListener('mouseenter', function (){
                 console.log('Element Notice 1 mouse entered');
-                createdEl = document.createElement('a-entity');
-                createdEl.setAttribute('text',{value:'Notice 1', color:'red'});
-                createdEl.setAttribute('position',{x:0.5,y:0.2,z:-0.8});
-                cameraElement.appendChild(createdEl);
+                imageEl = document.getElementById('notice_image1');
+                imageEl.setAttribute('visible',true);
             });
               el.addEventListener('mouseleave', function (){
                 console.log('Element Notice 1 mouse leaved');
-                createdEl.parentNode.removeChild(createdEl);  
+                imageEl.setAttribute('visible',false);  
             });
           }
         });  
         AFRAME.registerComponent('get-notice2-mosein', {
           init: function () {
             var el = this.el;
-            var cameraElement = document.getElementById('sceneCamera');  
-            var createdEl;
+            var imageEl;
             el.addEventListener('mouseenter', function (){
                 console.log('Element Notice 2 mouse entered');
-                createdEl = document.createElement('a-entity');
-                createdEl.setAttribute('text',{value:'Notice 2', color:'red'});
-                createdEl.setAttribute('position',{x:0.5,y:0.2,z:-0.8});
-                cameraElement.appendChild(createdEl);
+                imageEl = document.getElementById('notice_image2');
+                imageEl.setAttribute('visible',true);                                
             });
               el.addEventListener('mouseleave', function (){
                 console.log('Element Notice 2 mouse leaved');
-                createdEl.parentNode.removeChild(createdEl);  
+                imageEl.setAttribute('visible',false);  
             });
           }
         });
         AFRAME.registerComponent('get-notice3-mosein', {
           init: function () {
             var el = this.el;
-            var cameraElement = document.getElementById('sceneCamera');  
-            var createdEl;
+            var imageEl;
             el.addEventListener('mouseenter', function (){
                 console.log('Element Notice 3 mouse entered');
-                createdEl = document.createElement('a-entity');
-                createdEl.setAttribute('text',{value:'Notice 3', color:'red'});
-                createdEl.setAttribute('position',{x:0.5,y:0.2,z:-0.8});
-                cameraElement.appendChild(createdEl);
+                imageEl = document.getElementById('notice_image3');
+                imageEl.setAttribute('visible',true); 
             });
               el.addEventListener('mouseleave', function (){
                 console.log('Element Notice 3 mouse leaved');
-                createdEl.parentNode.removeChild(createdEl);  
+                imageEl.setAttribute('visible',false);  
             });
           }
         });
